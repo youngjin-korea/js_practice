@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let size=10; size<=35; size +=5){ //증감식에 i++ 또는 i-- 형식뿐 아니라 대입연산자 형식으로도 가능하다.
+            document.write("<span");
+            document.write("style='font-size:"+size+"px'>");
+            document.write(size+"px");
+            document.write("</span>"); // 값이 들어가는 size변수는 ""안에 넣지 않고 연결시켜줌. html span태그를 구현 할 수 있다.
+        }
+    </script>
+</body>
+</html>

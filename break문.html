@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i =0, sum= 0 ; //초기식
+        while(true){ //true를 이용하여 무한루프를 만들어줌
+            sum +=i; 
+
+            if(sum>3000)  //합이 3000이상 일때 브레이크 나옴
+            break;
+             
+            i++;
+        }
+        document.write(i+"까지 더하면 3000을 넘음:"+sum);
+        //증감식 가기전에 나오니깐 가능
+    </script>
+</body>
+</html>

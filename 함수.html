@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function adder(a, b) {
+        //function으로 함수 선언 a,b 매개변수(파라미터)
+        let sum;
+        sum = a + b;
+        return sum; // n 값에 sum을 보내준다.
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let n = adder(24567, 98732); //각각의 수는 adder함수의 매개변수에 들어갈 인수이다.
+      document.write("두 수의 합은" + n + "입니다.");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let plots = [20,10,5,8,30];
+        document.write("var plots = [20,10,5,8,30]<br>");
+
+        for(let i=0; i<5; i++){
+            let size = plots[i];
+            while(size>0){
+                document.write("*");
+                size--;
+            }
+            document.write(plots[i]+"<br>");
+        }
+        plots[6]=33; //7번째 수지만 , 0부터 시작이므로 6ㅇ,로 표현
+        document.write(plots[4]+","+plots[5]+","+plots[6]);
+        document.write(plots.length); // length property 를 이용
+    </script>
+</body>
+</html>

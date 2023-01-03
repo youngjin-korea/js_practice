@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 300px;
+        }
+    </style>
+//어려워서 완성하지 못한 예제 ... 차후에 다시 고민 해봐야함!!
+    <script>
+        let n1, n2;
+        let setting = false;
+
+        function randNum(min,max){
+            return Math.floor(Math.random()*(max-min+1))+min;
+
+        }
+
+
+        function  game1() {
+            let com = randNum(1,100);
+            let cnt1 = 0;
+            while(true){
+                let n = parseInt(prompt("1~100중 하나를 입력하세요"));
+                cnt1++;
+                if(n==com){
+                    alert("정답입니다.\n" +cnt1+"번만에 맞췄습니다.")
+                    break;
+                }
+
+                else if (n>com)
+                alert("입력한 값이 더 크다");
+                
+                else 
+                alert("입력값이 더 작다");
+            
+            }
+        }
+        
+        function setRnd(){
+            while(true){
+                n1 = parseInt(prompt("최댓값을 입력하시오"));
+                n2 = parseInt(prompt("최솟값을 입력하라"));
+                if(n1 == n2){
+                    alert("두 값이 동일 하다");
+                }
+                else if(n1<n2){
+                    alert("최솟값이 더크다");
+                }
+                else{
+                    alert("설정완료");
+                    break;
+                }
+                
+            }
+             setting = true;
+        }
+
+
+
+
+        function  game2() {
+            if(setting){
+                let com = randNum(n2,n1);
+                let cnt1 = 0;
+                while(true){
+                    let n = parseInt(prompt("1~100중 하나를 입력하세요"));
+                    cnt1++;
+                    if(n==com){
+                        alert("정답입니다.\n" +cnt1+"번만에 맞췄습니다.");
+                        break;
+                    }
+    
+                    else if (n>com)
+                    alert("입력한 값이 더 크다");
+                    
+                    else 
+                    alert("입력값이 더 작다");
+                
+                }
+            }
+            else{
+                alert("아직 범위 설정이 안되어 있습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>랜덤 값 맞추기</h2>
+    <form action="">
+        <fieldset>
+            <legend>1~100중 랜덤값 맞추기</legend>
+            <input type="button" value="시작" onclick="game1()">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>범위 지정 후 랜덤값 맞추기</legend>
+            <input type="button" value="범위지정" onclick="setRnd()">
+            <input type="button" value="맞추기" onclick="game2()">
+        </fieldset>
+
+    </form>
+</body>
+</html>
